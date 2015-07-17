@@ -5,27 +5,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.parse.ParseUser;
 
 
-public class MainActivity extends Activity {
-
-    private TextView titleTextView;
-    private TextView emailTextView;
-    private TextView nameTextView;
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-        titleTextView = (TextView) findViewById(R.id.profile_title);
-        emailTextView = (TextView) findViewById(R.id.profile_email);
-        nameTextView = (TextView) findViewById(R.id.profile_name);
-        titleTextView.setText(R.string.profile_title_logged_in);
 
         findViewById(R.id.logout_button).setOnClickListener(new View.OnClickListener() {
             @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -46,28 +38,5 @@ public class MainActivity extends Activity {
                 }
             }
         });
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        // Set up the profile page based on the current user.
-        ParseUser user = ParseUser.getCurrentUser();
-        showProfile(user);
-    }
-
-    /**
-     * Shows the profile of the given user.
-     *
-     * @param user
-     */
-    private void showProfile(ParseUser user) {
-        if (user != null) {
-            emailTextView.setText(user.getEmail());
-            String fullName = user.getString("name");
-            if (fullName != null) {
-                nameTextView.setText(fullName);
-            }
-        }
     }
 }

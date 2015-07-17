@@ -8,47 +8,80 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/logout_button"
+        style="@style/ParseLoginUI.Button"
+        android:layout_marginTop="@dimen/com_parse_ui_large_vertical_spacing"
+        android:text="@string/profile_logout_button_label"/>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbChat"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/app_name"
-            android:textSize="64sp"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.30" />
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_events"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="活动"
+            android:textColor="@color/tab_selector_tv_color" />
 
-        <TextView
-            android:id="@+id/profile_title"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/rbAddress"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ParseLoginUI.TextView"
-            android:text="@string/profile_title_logged_in" />
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_contacts"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="好友"
+            android:textColor="@color/tab_selector_tv_color" />
 
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/rbFind"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ParseLoginUI.TextView" />
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_settings"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="设置"
+            android:textColor="@color/tab_selector_tv_color" />
 
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/rbMe"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ParseLoginUI.TextView" />
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_more"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="更多"
+            android:textColor="@color/tab_selector_tv_color" />
+    </RadioGroup>
 
-        <Button
-            android:id="@+id/logout_button"
-            style="@style/ParseLoginUI.Button"
-            android:layout_marginTop="@dimen/com_parse_ui_large_vertical_spacing"
-            android:text="@string/profile_logout_button_label"/>
-    </LinearLayout>
 </LinearLayout>
