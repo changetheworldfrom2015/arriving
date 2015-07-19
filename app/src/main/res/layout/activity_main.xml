@@ -8,11 +8,31 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/logout_button"
-        style="@style/ParseLoginUI.Button"
-        android:layout_marginTop="@dimen/com_parse_ui_large_vertical_spacing"
-        android:text="@string/profile_logout_button_label"/>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/app_name"
+            android:id="@+id/textView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/logout_button"
+            style="@style/ParseLoginUI.Button"
+            android:text="@string/profile_logout_button_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/main_content"
@@ -27,7 +47,7 @@
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/rbChat"
+            android:id="@+id/rbEvents"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -38,11 +58,11 @@
             android:drawableTop="@drawable/tab_selector_events"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="2dp"
-            android:text="活动"
+            android:text="@string/events_fragment_name"
             android:textColor="@color/tab_selector_tv_color" />
 
         <RadioButton
-            android:id="@+id/rbAddress"
+            android:id="@+id/rbContacts"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -52,11 +72,11 @@
             android:drawableTop="@drawable/tab_selector_contacts"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="2dp"
-            android:text="好友"
+            android:text="@string/contacts_fragment_name"
             android:textColor="@color/tab_selector_tv_color" />
 
         <RadioButton
-            android:id="@+id/rbFind"
+            android:id="@+id/rbSettings"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -66,11 +86,11 @@
             android:drawableTop="@drawable/tab_selector_settings"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="2dp"
-            android:text="设置"
+            android:text="@string/settings_fragment_name"
             android:textColor="@color/tab_selector_tv_color" />
 
         <RadioButton
-            android:id="@+id/rbMe"
+            android:id="@+id/rbMore"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -80,7 +100,7 @@
             android:drawableTop="@drawable/tab_selector_more"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="2dp"
-            android:text="更多"
+            android:text="@string/more_fragment_name"
             android:textColor="@color/tab_selector_tv_color" />
     </RadioGroup>
 

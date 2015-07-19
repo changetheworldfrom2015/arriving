@@ -7,4 +7,10 @@
     <string name="twitter_consumer_secret">YOUR_TWITTER_CONSUMER_SECRET</string>
     <string name="profile_title_logged_in">Your are logged in as</string>
     <string name="profile_logout_button_label">Log out</string>
+
+    <string name="events_fragment_name">活动</string>
+    <string name="contacts_fragment_name">好友</string>
+    <string name="settings_fragment_name">设置</string>
+    <string name="more_fragment_name">更多</string>
+
 </resources>
