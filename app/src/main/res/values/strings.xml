@@ -13,4 +13,5 @@
     <string name="settings_fragment_name">设置</string>
     <string name="more_fragment_name">更多</string>
 
+    <string name="back_button_name">返回</string>
 </resources>
