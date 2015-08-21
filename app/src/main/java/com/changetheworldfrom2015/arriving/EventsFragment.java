@@ -1,5 +1,6 @@
 package com.changetheworldfrom2015.arriving;
 
+import android.app.ListFragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,25 +9,24 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.view.View;
 
 import com.parse.ParseObject;
 import com.parse.ParseQueryAdapter;
 
 
-public class EventsFragment extends Fragment  implements  AbsListView.OnItemClickListener {
+public class EventsFragment extends Fragment implements  ListView.OnItemClickListener {
 
-    private ParseQueryAdapter<ParseObject> mainAdapter;
-    private AbsListView mListView;
+    private EventListAdapter mainAdapter;
+    private ListView mListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Initialize main ParseQueryAdapter
-        mainAdapter=new
-                ParseQueryAdapter<ParseObject>(getActivity().getApplicationContext(),
-                "Event");
-        mainAdapter.setTextKey("title");
-        mainAdapter.setImageKey("photo");
+        mainAdapter=new EventListAdapter(getActivity().getApplicationContext());
+
     }
 
     @Override
@@ -35,7 +35,7 @@ public class EventsFragment extends Fragment  implements  AbsListView.OnItemClic
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.events, container, false);
-        mListView = (AbsListView) view.findViewById(R.id.EventslistView);
+        mListView = (ListView) view.findViewById(R.id.EventslistView);
         mListView.setAdapter(mainAdapter);
         mainAdapter.loadObjects();
         return view;
