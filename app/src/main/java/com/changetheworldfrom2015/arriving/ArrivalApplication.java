@@ -1,9 +1,9 @@
 package com.changetheworldfrom2015.arriving;
 
-import android.app.Application;
-
+import com.changetheworldfrom2015.arriving.model.Event;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseObject;
 import com.parse.ParseTwitterUtils;
 
 /**
@@ -15,6 +15,8 @@ public class ArrivalApplication extends android.app.Application {
         super.onCreate();
 
         // Required - Initialize the Parse SDK
+        ParseObject.registerSubclass(Event.class);
+
         Parse.initialize(this);
 
         Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);

@@ -14,4 +14,8 @@
     <string name="more_fragment_name">更多</string>
 
     <string name="back_button_name">返回</string>
+    <string name="title_activity_event_detail">EventDetailActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
