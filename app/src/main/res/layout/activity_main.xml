@@ -1,11 +1,107 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/com_parse_ui_vertical_margin"
+    android:paddingLeft="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingRight="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingBottom="@dimen/com_parse_ui_vertical_margin"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:weightSum="1">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/app_name"
+            android:id="@+id/textView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/logout_button"
+            style="@style/ParseLoginUI.Button"
+            android:text="@string/profile_logout_button_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbEvents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_events"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/events_fragment_name"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbContacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_contacts"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/contacts_fragment_name"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_settings"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/settings_fragment_name"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_more"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/more_fragment_name"
+            android:textColor="@color/tab_selector_tv_color" />
+    </RadioGroup>
+
+</LinearLayout>
