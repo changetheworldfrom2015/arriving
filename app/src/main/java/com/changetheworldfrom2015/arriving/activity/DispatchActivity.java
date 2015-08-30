@@ -1,4 +1,4 @@
-package com.changetheworldfrom2015.arriving;
+package com.changetheworldfrom2015.arriving.activity;
 
 import com.parse.ui.ParseLoginDispatchActivity;
 

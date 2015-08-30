@@ -1,4 +1,4 @@
-package com.changetheworldfrom2015.arriving;
+package com.changetheworldfrom2015.arriving.fragment;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -6,12 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ContactsFragment extends Fragment{
+import com.changetheworldfrom2015.arriving.R;
+
+public class MoreFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.contacts, container, false);
+        return inflater.inflate(R.layout.more, container, false);
     }
 }

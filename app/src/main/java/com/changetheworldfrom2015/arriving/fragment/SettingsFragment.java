@@ -1,10 +1,12 @@
-package com.changetheworldfrom2015.arriving;
+package com.changetheworldfrom2015.arriving.fragment;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.changetheworldfrom2015.arriving.R;
 
 public class SettingsFragment extends Fragment{
 
